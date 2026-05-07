@@ -2,81 +2,462 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Student Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Verification - Vishal</title>
 
 <style>
-    body {
-        font-family: Arial;
-        background-color: #f5f5f5;
-        margin: 0;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* HEADER */
+
+.header{
+    width:100%;
+    background:#ffffff;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    flex-wrap:wrap;
+}
+
+.logo-section{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+}
+
+.logo-text h1{
+    font-size:60px;
+    color:green;
+    line-height:50px;
+}
+
+.logo-text p{
+    color:green;
+    font-weight:bold;
+    font-size:14px;
+}
+
+/* MENU */
+
+.menu{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#0b1c47;
+    font-size:18px;
+    font-weight:600;
+}
+
+/* HERO SECTION */
+
+.hero{
+    width:100%;
+    background:#556789;
+    padding:90px 20px;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:72px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:28px;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1350px;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:8px;
+}
+
+.title{
+    text-align:center;
+    font-size:52px;
+    color:#00458a;
+    margin-bottom:40px;
+    font-weight:bold;
+}
+
+.top-section{
+    display:flex;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+/* PHOTO */
+
+.student-photo{
+    width:420px;
+}
+
+.student-photo img{
+    width:100%;
+    border-radius:4px;
+    border:1px solid #ccc;
+}
+
+/* TABLE */
+
+.details{
+    flex:1;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:25px;
+}
+
+table td{
+    border:1px solid #d6d6d6;
+    padding:18px;
+    font-size:26px;
+}
+
+table tr td:first-child{
+    width:40%;
+    background:#fafafa;
+    font-weight:bold;
+}
+
+/* MARKS SECTION */
+
+.marks-header{
+    background:#0a45c2;
+    color:white;
+    padding:18px;
+    font-size:26px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#021548;
+    color:white;
+    padding:60px 50px;
+    margin-top:50px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.footer-box{
+    width:30%;
+    min-width:250px;
+}
+
+.footer-box h2{
+    margin-bottom:25px;
+    font-size:40px;
+}
+
+.footer-box p{
+    line-height:1.8;
+    font-size:22px;
+}
+
+.footer-box ul{
+    list-style:none;
+}
+
+.footer-box ul li{
+    margin-bottom:15px;
+    font-size:22px;
+}
+
+.footer-box ul li::before{
+    content:"› ";
+    font-weight:bold;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero h1{
+        font-size:42px;
     }
 
-    .container {
-        width: 90%;
-        max-width: 600px;
-        margin: 20px auto;
-        background: white;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .hero p{
+        font-size:20px;
     }
 
-    h2 {
-        text-align: center;
+    .top-section{
+        flex-direction:column;
+        align-items:center;
     }
 
-    img {
-        display: block;
-        margin: 20px auto;
-        width: 180px;
-        height: 200px;
-        object-fit: cover;
-        border: 1px solid #ccc;
+    .student-photo{
+        width:100%;
+        max-width:400px;
     }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
+    table td{
+        font-size:18px;
     }
 
-    th, td {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: left;
+    .footer-box{
+        width:100%;
     }
 
-    th {
-        background: #eee;
+    .menu{
+        margin-top:20px;
     }
+
+    .logo-text h1{
+        font-size:40px;
+    }
+
+}
+
 </style>
-
 </head>
 
 <body>
 
+<!-- HEADER -->
+
+<div class="header">
+
+    <div class="logo-section">
+
+        <!-- NCPTIR LOGO -->
+        <img src="logo.png" alt="NCPTIR Logo" class="logo-img">
+
+        <div class="logo-text">
+            <h1>NCPTIR</h1>
+
+            <p>राष्ट्रीय पैरामेडिकल प्रशिक्षण संस्थान एवं अनुसंधान परिषद</p>
+
+            <p>Call Us : +91-9813087474</p>
+        </div>
+
+    </div>
+
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Franchise</a>
+        <a href="#">Course Detail</a>
+        <a href="#">Admission</a>
+        <a href="#">Happenings</a>
+        <a href="#">Student Corner</a>
+        <a href="#">Contact</a>
+    </div>
+
+</div>
+
+<!-- HERO -->
+
+<div class="hero">
+
+    <h1>Student Verification</h1>
+
+    <p>Home / Student Verification</p>
+
+</div>
+
+<!-- MAIN -->
+
 <div class="container">
 
-<h2>STUDENT DETAILS</h2>
+    <div class="title">STUDENT DETAILS</div>
 
-<!-- IMPORTANT: jpeg extension same hona chahiye -->
-<img src="photo.jpeg" alt="Student Photo">
+    <div class="top-section">
 
-<table>
-<tr><th>Field</th><th>Details</th></tr>
+        <!-- STUDENT PHOTO -->
 
-<tr><td>Name</td><td>Vishal</td></tr>
-<tr><td>Aadhar No.</td><td>335709227423</td></tr>
-<tr><td>Father's Name</td><td>Nar Bahadur</td></tr>
-<tr><td>Mother's Name</td><td>Shakuntla</td></tr>
-<tr><td>Date of Birth</td><td>25-06-1995</td></tr>
-<tr><td>Course</td><td>Emergency Medical Technician (Advanced)</td></tr>
-<tr><td>Course Duration</td><td>1 Year</td></tr>
-<tr><td>Session</td><td>2017 - 2018</td></tr>
-<tr><td>Registration No.</td><td>REGCE/201810224</td></tr>
-<tr><td>Enroll No.</td><td>NCPTIR/2505122</td></tr>
-<tr><td>Roll No.</td><td>192505122</td></tr>
-<tr><td>College/Institute</td><td>Sahara Skill Development College Hisar (NCPTIR-1001)</td></tr>
+        <div class="student-photo">
 
-</table>
+            <!-- APNI PHOTO -->
+            <img src="photo.png" alt="Vishal">
+
+        </div>
+
+        <!-- DETAILS -->
+
+        <div class="details">
+
+            <table>
+
+                <tr>
+                    <td>Name</td>
+                    <td>Vishal</td>
+                </tr>
+
+                <tr>
+                    <td>Aadhar No.</td>
+                    <td>335709227423</td>
+                </tr>
+
+                <tr>
+                    <td>Father's Name</td>
+                    <td>Nar Bahadur</td>
+                </tr>
+
+                <tr>
+                    <td>Mother's Name</td>
+                    <td>Shakuntla</td>
+                </tr>
+
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>25-06-1995</td>
+                </tr>
+
+                <tr>
+                    <td>Course</td>
+                    <td>Emergency Medical Technician (Advanced)</td>
+                </tr>
+
+                <tr>
+                    <td>Course Duration</td>
+                    <td>1 Year</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- SECOND TABLE -->
+
+    <table>
+
+        <tr>
+            <td>Session</td>
+            <td>2017 - 2018</td>
+        </tr>
+
+        <tr>
+            <td>Registration No.</td>
+            <td>REGCE/201810224</td>
+        </tr>
+
+        <tr>
+            <td>Enroll No.</td>
+            <td>NCPTIR/2505122</td>
+        </tr>
+
+        <tr>
+            <td>Roll No.</td>
+            <td>192505122</td>
+        </tr>
+
+        <tr>
+            <td>College/Institute</td>
+            <td>Sahara Skill Development College Hisar (NCPTIR-1001)</td>
+        </tr>
+
+    </table>
+
+    <!-- MARKS -->
+
+    <div class="marks-header">
+
+        Year &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Obtain Marks &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Total Marks
+
+    </div>
+
+    <table>
+
+        <tr>
+            <td>First Year</td>
+            <td>410</td>
+            <td>600</td>
+        </tr>
+
+    </table>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <h2>NCPTIR</h2>
+
+            <p>
+                NCPTIR is a paramedical organization.
+                This page is created for student verification
+                and educational purposes.
+            </p>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h2>Contact Info</h2>
+
+            <p>
+                Plot no 541 Opp metro pillar 509<br>
+                West Cabin block Main Rohtak road<br>
+                Mundka (Nangloi)<br>
+                New Delhi 110041<br><br>
+
+                📧 info@example.com<br>
+                📞 9813087474
+            </p>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h2>Useful Links</h2>
+
+            <ul>
+                <li>About</li>
+                <li>Course Details</li>
+                <li>Admission</li>
+                <li>Happenings</li>
+                <li>Contact Us</li>
+            </ul>
+
+        </div>
+
+    </div>
 
 </div>
 
